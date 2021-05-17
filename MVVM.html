@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="./Watcher.js"></script>
+	<script src="./Obsever.js"></script>
+	<script src="./Compile.js"></script>
+	<script src="./MVVM.js"></script>
+</head>
+<body>
+	<div id="app">
+		{{lover}}
+		<h1>{{name.name1}}</h1>
+		<input type="text" v-model='name.name1'>
+		<ul>
+			<li>{{p.age}}</li>
+		</ul>
+	</div>
+	<script>
+		let vm = new MVVM({
+			el:"#app",
+			data:{
+				name:{
+					name1:'lxw'
+				},
+				p:{
+					age:30,
+					sex:'男'
+				},
+				lover:['123','456']
+			}
+		})
+	</script>
+</body>
+</html>
